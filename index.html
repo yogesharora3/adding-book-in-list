@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOK Poject</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        .container{
+            width:50%;
+            margin:auto;
+        }
+        #Book-form div{
+            margin:10px;
+        }
+        #Book-form div input[type="text"],#Book-form div input[type="submit"]{
+            width:100%;
+            margin-top: 10px;
+            height: 1.7em;
+            font-size: 0.8em;
+        }
+        #Book-form div input[type="submit"]{
+            height:1.7em;
+            font-size: 1.3em;
+            text-transform: uppercase;
+        }
+
+        #Book-form div label{
+            /* margin:30px 0; */
+        }
+        table{
+            margin-top: 30px;
+            width:100%;
+            border: 1px solid black;
+        }
+        tr{
+            text-align: center;
+        }
+        .form-search{
+            /* margin-left:40px; */
+            margin-top: 20px;
+            display:flex;
+            justify-content: center;
+            
+            /* align-items: center; */
+        }
+        .form-search select{
+            text-transform: uppercase;
+        }
+        .error,.success{
+            color:white;
+            font-size: 1.2em;
+            padding:16px 40px;
+        }
+        .error{
+            background-color: red;
+        }
+        .success{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-transform: uppercase;">ADD A bOOK</h1>
+        <form   id="Book-form">
+            <div>
+                <label for="title">Title</label>
+                <br>
+                <input type="text" id="title" name="title" placeholder="Enter the title of the book">
+            </div>
+            <div>
+                <label for="Author">Author</label>
+                <br>
+                <input type="text" id="Author" name="author" placeholder="enter the author of book">
+            </div>
+            <div>
+                <label for="ISBN">ISBN</label>
+                <br>
+                <input type="text" id="ISBN" name="isbn" placeholder="enter  the ISBN number of book">
+            </div>
+            <div>
+                <input type="submit" value="submit">
+            </div>
+        </form>
+        <form class="form-search">
+            <select>
+                <option value="title">title</option>
+                <option value="author">author</option>
+                <option value="ISBN">ISBN</option>
+            </select>
+            <input type="search" name="search" id="search">
+        </form>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="Book-list">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
